@@ -21,11 +21,12 @@ int stringAInt(char* cadena){
     int equivalenteInt = 0;
     int i=0;
     int numero;
-    while (cadena[i]=! "/0")
-    {   
+    int decena = 0;
+    int largoCadena = largo(cadena);
+    for(i=largoCadena-1; i>0; i--){   
         numero = charAInt(cadena[i]);
-        equivalenteInt += numero * pow(10, i);
-        i++;
+        equivalenteInt += numero * pow(10, decena);
+        decena++;
     }
 
     return equivalenteInt;
