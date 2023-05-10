@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 #include <ctype.h>
 
 int main(){
@@ -35,6 +34,16 @@ int stringAInt(char* cadena){
 
 int charAInt(char caracter){
     return caracter - 48;
+}
+
+int potencia(int numero, int potencia){
+    int resultado = 1;
+    if (potencia != 0){
+        for (int i = 0; i <= potencia; i++){
+            resultado *= numero;
+        }
+    }
+    return resultado;
 }
 
 void cadenaAMayusculas (char* cadena)
