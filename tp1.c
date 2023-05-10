@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <ctype.h>
 
 int main(){
 
@@ -34,4 +35,14 @@ int stringAInt(char* cadena){
 
 int charAInt(char caracter){
     return caracter - 48;
+}
+
+void cadenaAMayusculas (char* cadena)
+{
+    int i = 0;
+    while (cadena[i]=!"/0")
+    {
+        cadena[i]=toupper(cadena[i]);
+        i++;
+    }
 }
