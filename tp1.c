@@ -11,7 +11,7 @@ return 0;
 int largo(char* cadena){
     int i = 0;
 
-    while (cadena[i]=! "/0")
+    while (cadena[i]=! '\0')
     {
         i++;
     }
@@ -40,7 +40,7 @@ int charAInt(char caracter){
 void cadenaAMayusculas (char* cadena)
 {
     int i = 0;
-    while (cadena[i]=!"/0")
+    while (cadena[i]=!'\0')
     {
         cadena[i]=toupper(cadena[i]);
         i++;
