@@ -1,16 +1,26 @@
 #include <stdio.h>
 #include <math.h>
 
+/* Functions */
+void convertirCadenaMayusculas(char* cadena);
+int largo(char* cadena);
+int stringAInt(char* cadena);
+int charAInt(char caracter);
+
 int main(){
+    /* Cadena de prueba para las funciones */
+    char* cadena = "computacion";
 
+    convertirCadenaMayusculas(cadena);
 
-return 0;
+    return 0;
 }
+
 
 int largo(char* cadena){
     int i = 0;
 
-    while (cadena[i]=! "/0")
+    while (cadena[i] != '\0')
     {
         i++;
     }
@@ -35,3 +45,15 @@ int stringAInt(char* cadena){
 int charAInt(char caracter){
     return caracter - 48;
 }
+
+void convertirCadenaMayusculas (char* cadena) {
+    int largoCadena = largo(cadena);
+    int i;
+    for (i = 0; i <= largoCadena; i++) {
+        if (cadena[i] >= 'a' && cadena[i] <= 'z') {
+            cadena[i] = cadena[i] - 32;
+        }
+    }
+}
+
+int 
