@@ -76,4 +76,5 @@ char* modificarCadena (char* cadena, char caracter, int posicion) {
             break;
         }
     }
+    return cadena;
 }
