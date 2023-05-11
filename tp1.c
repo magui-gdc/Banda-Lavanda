@@ -6,6 +6,7 @@ void convertirCadenaMayusculas(char* cadena);
 int largo(char* cadena);
 int stringAInt(char* cadena);
 int charAInt(char caracter);
+char* modificarCadena (char* cadena, char caracter, int posicion);
 
 int main(){
     /* Cadena de prueba para las funciones */
@@ -62,6 +63,17 @@ void convertirCadenaMayusculas (char* cadena) {
     for (i = 0; i <= largoCadena; i++) {
         if (cadena[i] >= 'a' && cadena[i] <= 'z') {
             cadena[i] = cadena[i] - 32;
+        }
+    }
+}
+
+char* modificarCadena (char* cadena, char caracter, int posicion) {
+    int i = 0;
+    int largoCadena = largo(cadena);
+    for (i; i <= largoCadena; i++) {
+        if (i == posicion - 1) {
+            cadena[i] = caracter;
+            break;
         }
     }
 }
