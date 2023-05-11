@@ -46,18 +46,6 @@ int charAInt(char caracter){
     return caracter - 48;
 }
 
-<<<<<<< HEAD
-void convertirCadenaMayusculas (char* cadena) {
-    printf("hola como andas");
-    int largoCadena = largo(cadena);
-    int i;
-    for (i = 0; i <= largoCadena; i++) {
-        printf("Hola soy del for");
-        if (cadena[i] >= 'a' && cadena[i] <= 'z') {
-            cadena[i] = cadena[i] - 32;
-            printf("Hola 1");
-        }
-=======
 int potencia(int numero, int potencia){
     int resultado = 1;
     if (potencia != 0){
@@ -68,14 +56,12 @@ int potencia(int numero, int potencia){
     return resultado;
 }
 
-void cadenaAMayusculas (char* cadena)
-{
-    int i = 0;
-    while (cadena[i]=!'\0')
-    {
-        cadena[i]=toupper(cadena[i]);
-        i++;
->>>>>>> 0220cd27cb58b1dbcaf5f357b827364df0c741db
+void convertirCadenaMayusculas (char* cadena) {
+    int largoCadena = largo(cadena);
+    int i;
+    for (i = 0; i <= largoCadena; i++) {
+        if (cadena[i] >= 'a' && cadena[i] <= 'z') {
+            cadena[i] = cadena[i] - 32;
+        }
     }
-    printf("Hola 2");
 }
