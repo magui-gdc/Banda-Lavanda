@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <ctype.h>
 
 /* Functions */
 void convertirCadenaMayusculas(char* cadena);
@@ -47,13 +48,15 @@ int charAInt(char caracter){
 }
 
 void convertirCadenaMayusculas (char* cadena) {
+    printf("hola como andas");
     int largoCadena = largo(cadena);
     int i;
     for (i = 0; i <= largoCadena; i++) {
+        printf("Hola soy del for");
         if (cadena[i] >= 'a' && cadena[i] <= 'z') {
             cadena[i] = cadena[i] - 32;
+            printf("Hola 1");
         }
     }
+    printf("Hola 2");
 }
-
-int 
