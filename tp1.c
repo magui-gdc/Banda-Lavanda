@@ -7,6 +7,7 @@ int largo(char* cadena);
 int stringAInt(char* cadena);
 int charAInt(char caracter);
 void eliminarCaracter(char* cadena, char caracter);
+char* modificarCadena (char* cadena, char caracter, int posicion);
 
 /*
 int main(){
@@ -99,4 +100,16 @@ void eliminarCaracter(char* cadena, char caracter) {
         }   
     }
     cadena[j] = '\0';
+}
+
+char* modificarCadena (char* cadena, char caracter, int posicion) {
+    int i = 0;
+    int largoCadena = largo(cadena);
+    for (i; i <= largoCadena; i++) {
+        if (i == posicion - 1) {
+            cadena[i] = caracter;
+            break;
+        }
+    }
+    return cadena;
 }
