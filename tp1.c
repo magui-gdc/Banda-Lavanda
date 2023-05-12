@@ -20,7 +20,7 @@ int main(){
     return 0;
 }
 */
-
+/*
 int main() {
     char cadena[100], caracter;
 
@@ -36,7 +36,7 @@ int main() {
 
     return 0;
 }
-
+*/
 
 
 
@@ -102,6 +102,7 @@ void eliminarCaracter(char* cadena, char caracter) {
     cadena[j] = '\0';
 }
 
+/*
 char* concatenarCadenas(char* cadena1, char* cadena2) {
     int largoCadena1 = largo(cadena1);
     int largoCadenaFinal = largoCadena1 + largo(cadena2);
@@ -116,7 +117,7 @@ char* concatenarCadenas(char* cadena1, char* cadena2) {
     }
     return cadenaFinal;
 }
-
+*/
 char* modificarCadena (char* cadena, char caracter, int posicion) {
     int i = 0;
     int largoCadena = largo(cadena);
