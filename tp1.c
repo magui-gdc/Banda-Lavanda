@@ -102,6 +102,21 @@ void eliminarCaracter(char* cadena, char caracter) {
     cadena[j] = '\0';
 }
 
+char* concatenarCadenas(char* cadena1, char* cadena2) {
+    int largoCadena1 = largo(cadena1);
+    int largoCadenaFinal = largoCadena1 + largo(cadena2);
+    char* cadenaFinal[largoCadenaFinal];
+    int i = 0;
+    for (i; i <= largoCadenaFinal; i++){
+        if (i < largoCadena1){
+            cadenaFinal[i] = cadena1[i];
+        } else {
+            cadenaFinal[i] = cadena2[i];
+        }
+    }
+    return cadenaFinal;
+}
+
 char* modificarCadena (char* cadena, char caracter, int posicion) {
     int i = 0;
     int largoCadena = largo(cadena);
