@@ -8,6 +8,7 @@ int stringAInt(char* cadena);
 int charAInt(char caracter);
 void eliminarCaracter(char* cadena, char caracter);
 char* modificarCadena (char* cadena, char caracter, int posicion);
+int funcionPrueba ();
 
 /*
 int main(){
@@ -38,6 +39,9 @@ int main() {
 }
 */
 
+int funcionPrueba (){
+    return 1234;
+}
 
 
 int largo(char* cadena){
