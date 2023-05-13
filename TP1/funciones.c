@@ -1,43 +1,11 @@
 #include <stdio.h>
-
-
-/* Functions */
-void convertirCadenaMayusculas(char* cadena);
-int largo(char* cadena);
-int stringAInt(char* cadena);
-int charAInt(char caracter);
-void eliminarCaracter(char* cadena, char caracter);
-void modificarCadena (char* cadena, char caracter, int posicion);
-int funcionPrueba ();
-
-/*
-int main(){
-    Cadena de prueba para las funciones 
-    char* cadena = "computacion";
-    char caracter = "c";
-
-    eliminarCaracter(cadena, caracter);
-
-    return 0;
-}
-*/
-/*
-int main() {
-    char cadena[100], caracter;
-
-    printf("Ingrese la cadena: ");
-    gets(cadena);
-
-    printf("Ingrese el caracter que desea eliminar: ");
-    scanf("%c", &caracter);
-
-    eliminarCaracter(cadena, caracter);
-
-    printf("La cadena resultante es: %s\n", cadena);
-
-    return 0;
-}
-*/
+void convertirCadenaMayusculas(char*);
+int largo(char*);
+int stringAInt(char*);
+int charAInt(char);
+void eliminarCaracter(char*, char);
+void modificarCadena (char*, char, int);
+char* concatenarCadenas(char*, char*);
 
 int largo(char* cadena){
     int i = 0;
@@ -59,6 +27,10 @@ int potencia(int numero, int potencia){
     return resultado;
 }
 
+int charAInt(char caracter){
+    return caracter - 48;
+}
+
 int stringAInt(char* cadena){
     int equivalenteInt = 0;
     int i=0;
@@ -72,10 +44,6 @@ int stringAInt(char* cadena){
     }
 
     return equivalenteInt;
-}
-
-int charAInt(char caracter){
-    return caracter - 48;
 }
 
 
@@ -101,7 +69,7 @@ void eliminarCaracter(char* cadena, char caracter) {
     cadena[j] = '\0';
 }
 
-/*
+/*      NO FUNCIONA!!!
 char* concatenarCadenas(char* cadena1, char* cadena2) {
     int largoCadena1 = largo(cadena1);
     int largoCadenaFinal = largoCadena1 + largo(cadena2);
@@ -113,6 +81,27 @@ char* concatenarCadenas(char* cadena1, char* cadena2) {
         } else {
             cadenaFinal[i] = cadena2[i];
         }
+    }
+    return cadenaFinal;
+}
+*/
+/*          TAMPOCO FUNCIONA!!
+char* concatenarCadenas(char* cadena1, char* cadena2) {
+    int largoCadena1 = largo(cadena1);
+    int largoCadenaFinal = largoCadena1 + largo(cadena2);
+    int i = 0;
+    int j = 0;
+
+    char* cadenaFinal[largoCadenaFinal];
+    while (cadena1[i] != '\0') {
+        cadenaFinal[i] = cadena1[i];
+        i++;
+    }
+
+    while (cadena2[j] != '\0') {
+        cadenaFinal[i] = cadena2[j];
+        i++;
+        j++;
     }
     return cadenaFinal;
 }
