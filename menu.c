@@ -5,10 +5,9 @@
 int main() {
 
     int opcion;
-    char* cadena;
+    char cadena[100];
 
     menu:
-    cadena = NULL;
     printf("\n\n\n INGRESAR OPCION: \n");
     printf("\n 1. Calcular longitud.");
     printf("\n 2. Calcular equivalente numerico.");
@@ -24,19 +23,18 @@ int main() {
     {
     case 1:
         printf("\nCALCULO DE LONGITUD\nIngrese cadena:\n");
-        scanf(" %c", cadena);
+        scanf("%99s", cadena);
         printf("El largo es: \n");
         printf("%d", largo(cadena));
         goto menu;
     
     case 2:
         printf("\nCALCULO DE EQUIVALENTE NUMERICA\nIngrese cadena:");
-        scanf(" %c", &cadena);
+        scanf(" %99s", cadena);
         printf("%d", stringAInt(cadena));
         goto menu;
 
     case 3:
-        printf("%d", funcionPrueba());
     case 7:
         return 0;
     }

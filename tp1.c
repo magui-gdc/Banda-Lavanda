@@ -7,7 +7,7 @@ int largo(char* cadena);
 int stringAInt(char* cadena);
 int charAInt(char caracter);
 void eliminarCaracter(char* cadena, char caracter);
-char* modificarCadena (char* cadena, char caracter, int posicion);
+void modificarCadena (char* cadena, char caracter, int posicion);
 int funcionPrueba ();
 
 /*
@@ -39,11 +39,6 @@ int main() {
 }
 */
 
-int funcionPrueba (){
-    return 1234;
-}
-
-
 int largo(char* cadena){
     int i = 0;
 
@@ -57,7 +52,7 @@ int largo(char* cadena){
 int potencia(int numero, int potencia){
     int resultado = 1;
     if (potencia != 0){
-        for (int i = 0; i <= potencia; i++){
+        for (int i = 0; i < potencia; i++){
             resultado *= numero;
         }
     }
@@ -70,7 +65,7 @@ int stringAInt(char* cadena){
     int numero;
     int decena = 0;
     int largoCadena = largo(cadena);
-    for(i=largoCadena-1; i>0; i--){   
+    for(i=largoCadena-1; i>=0; i--){   
         numero = charAInt(cadena[i]);
         equivalenteInt += numero * potencia(10, decena);
         decena++;
@@ -122,7 +117,7 @@ char* concatenarCadenas(char* cadena1, char* cadena2) {
     return cadenaFinal;
 }
 */
-char* modificarCadena (char* cadena, char caracter, int posicion) {
+void modificarCadena (char* cadena, char caracter, int posicion) {
     int i = 0;
     int largoCadena = largo(cadena);
     for (i; i <= largoCadena; i++) {
@@ -131,5 +126,4 @@ char* modificarCadena (char* cadena, char caracter, int posicion) {
             break;
         }
     }
-    return cadena;
 }
