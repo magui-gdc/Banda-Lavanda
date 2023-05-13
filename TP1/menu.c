@@ -56,26 +56,27 @@ int main() {
         printf("\nELIMINAR EL CARACTER DADO\nIngrese cadena:");
         scanf(" %99s", cadena);
         printf("\nIngrese caracter a eliminar:");
-        scanf(" %c", caracter);
+        scanf(" %c", &caracter);
         eliminarCaracter(cadena, caracter);
         printf("La cadena con el caracter %c eliminado seria: %s",caracter,cadena);
         goto menu;
 
-    case 5:      // NO FUNCIONA!!!!!!!! 
+    /*case 5:      // NO FUNCIONA!!!!!!!! 
         printf("\nCONCATENAR DOS CADENAS\nIngrese primera cadena:");
         scanf(" %99s", cadena);
         printf("\nIngrese segunda cadena:");
         scanf(" %99s", cadena2);
         printf("La cadena %s y %s concatenadas serian: %s",cadena,cadena2,concatenarCadenas(cadena,cadena2));
         goto menu;     
-
+*/
     case 6:
         printf("\nMODIFICAR CADENA\nIngrese cadena:");
         scanf(" %99s", cadena);
         printf("\nIngrese caracter a agregar:");
-        scanf(" %c", caracter);
+        scanf(" %c", &caracter);
         printf("\nIngrese posicion a agregar caracter:");
-        scanf(" %d", posicion);
+        scanf(" %d", &posicion);
+        modificarCadena(cadena, caracter, posicion);
         printf("La cadena con el caracter %c agregado en %d seria: %s",caracter,posicion,cadena);
         goto menu;
 

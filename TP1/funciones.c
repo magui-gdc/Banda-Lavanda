@@ -68,12 +68,11 @@ void eliminarCaracter(char* cadena, char caracter) {
     }
     cadena[j] = '\0';
 }
-
-/*      NO FUNCIONA!!!
+/*
 char* concatenarCadenas(char* cadena1, char* cadena2) {
     int largoCadena1 = largo(cadena1);
     int largoCadenaFinal = largoCadena1 + largo(cadena2);
-    char* cadenaFinal[largoCadenaFinal];
+    char cadenaFinal[largoCadenaFinal];
     int i = 0;
     for (i; i <= largoCadenaFinal; i++){
         if (i < largoCadena1){
