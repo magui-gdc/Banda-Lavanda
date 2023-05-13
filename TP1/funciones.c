@@ -91,7 +91,10 @@ char* concatenarCadenas(char* cadena1, char* cadena2) {
     int i = 0;
     int j = 0;
 
-    char* cadenaFinal[largoCadenaFinal];
+    char cadenaFinal[largoCadenaFinal];
+   
+   char* aux = &cadenaFinal
+
     while (cadena1[i] != '\0') {
         cadenaFinal[i] = cadena1[i];
         i++;
@@ -102,7 +105,7 @@ char* concatenarCadenas(char* cadena1, char* cadena2) {
         i++;
         j++;
     }
-    return cadenaFinal;
+    return aux;
 }
 */
 void modificarCadena (char* cadena, char caracter, int posicion) {
