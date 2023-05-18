@@ -4,7 +4,7 @@ int largo(char*);
 int stringAInt(char*);
 int charAInt(char);
 void eliminarCaracter(char*, char);
-void modificarCadena (char*, char, int);
+void agregarCaracter (char*, char, int, char*);
 void concatenarCadenas(char*, char*, char*);
 
 int largo(char* cadena){
@@ -90,13 +90,26 @@ void concatenarCadenas (char* cadena1, char* cadena2, char* cadenaFinal){
     
 }
 
-void modificarCadena (char* cadena, char caracter, int posicion) {
-    int i = 0;
-    int largoCadena = largo(cadena);
-    for (i; i <= largoCadena; i++) {
-        if (i == posicion - 1) {
-            cadena[i] = caracter;
-            break;
+void agregarCaracter (char* cadena, char caracter, int posicion, char* cadenaFinal) {
+
+    int i = 0, j = 0, largoCadena = largo(cadena);
+
+    while (i < largoCadena+1)
+    {
+        if(i == posicion-1){
+            cadenaFinal[i] = caracter;
+            i++;
+
         }
+        else
+        {
+            cadenaFinal[i] = cadena[j];
+            i++;
+            j++;
+        }
+        
     }
+
+    cadenaFinal[i] = '\0';
+
 }

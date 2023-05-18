@@ -18,7 +18,7 @@ int main() {
     printf("\n 3. Conviertir a mayusculas.");
     printf("\n 4. Eliminar caracter dado.");
     printf("\n 5. Concatenar dos cadenas.");
-    printf("\n 6. Modificar la cadena con la inserciOn de un carácter en una posición determinada. ");
+    printf("\n 6. Modificar la cadena con la insercion de un caracter en una posicion determinada. ");
     printf("\n 7. Salir del programa. \n\n\n");
 
     scanf("%d", &opcion);
@@ -77,15 +77,12 @@ int main() {
         scanf(" %c", &caracter);
         printf("\nIngrese posicion a agregar caracter:");
         scanf(" %d", &posicion);
-        modificarCadena(cadena, caracter, posicion);
-        printf("La cadena con el caracter %c agregado en %d seria: %s",caracter,posicion,cadena);
+        agregarCaracter(cadena, caracter, posicion,cadena3);
+        printf("La cadena con el caracter %c agregado en %d seria: %s",caracter,posicion,cadena3);
         goto menu;
 
     case 7:
         return 0;
     }
-
-
-    
 
 }
